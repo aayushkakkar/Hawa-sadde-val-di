@@ -1,0 +1,90 @@
+body {
+    background-color: #fff;
+    color: #212529;
+    font-size: 1rem;
+    font-weight: 400;
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.5;
+    margin: 0;
+    text-align: left;
+}
+
+.container {
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+    text-align: center;
+}
+
+.header {
+    background-color: black;
+    color: #fff;
+    margin-bottom: 2rem;
+    padding: 2rem 1rem;
+    text-align: center;
+}
+
+.consent{
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.section {
+    padding: 0.5rem 2rem 1rem 2rem;
+}
+
+.section:hover {
+    background-color: #f5f5f5;
+    transition: color 2s ease-in-out, background-color 0.15s ease-in-out;
+}
+
+h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 48px;
+}
+
+button, input[type="submit"] {
+    background-color: black;
+    border: 1px solid transparent;
+    border-radius: 0.5rem;
+    color: white;
+    font-size: 0.95rem;
+    font-weight: 400;
+    line-height: 1.5;
+    margin: 0.5rem;
+    padding: 1rem 1rem;
+    text-align: center;
+    transition: transform 0.3s ease;
+    /* transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out; */
+    vertical-align: middle;
+
+}
+button:hover {
+    /*  */
+    border: none;
+    color: pink;
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.8),
+                0 0 10px rgba(255, 255, 255, 0.6),
+                0 0 15px rgba(255, 255, 255, 0.4);
+    transform: scale(1.2,1.2);
+}
+
+input[type="text"] {
+    line-height: 1.8;
+    width: 25%;
+}
+
+input[type="text"]:hover {
+    background-color: #f5f5f5;
+    transition: color 2s ease-in-out, background-color 0.15s ease-in-out;
+    background-image: linear-gradient(to right,violet,blue);
+}
+input[type="submit"]:hover {
+    border: none;
+    color: pink;
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.8),
+                0 0 10px rgba(255, 255, 255, 0.6),
+                0 0 15px rgba(255, 255, 255, 0.4);
+    transform: scale(1.2,1.2);
+}

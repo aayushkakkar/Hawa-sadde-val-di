@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>Trivia!</title>
+        <script>
+            // TODO: Add code to check answers to questions
+            let a_diljit = new Audio('goat_diljit.mp3');
+            let a_sidhu = new Audio('Goat_Sidhu.mp3');
+            let a_AP = new Audio('Goat_ap.mp3');
+            let a_aujla = new Audio('Goat_aujla.mp3');
+            let a_cheema = new Audio('Goat_cheema.mp3');
+
+            document.addEventListener('DOMContentLoaded', function(){
+            document.getElementById('diljit').addEventListener('mouseover',function(){
+            a_diljit.play()
+            });
+            document.getElementById('diljit').addEventListener('mouseout',function(){
+            a_diljit.pause()
+            });
+
+            document.getElementById('sidhu').addEventListener('mouseover',function(){
+            a_sidhu.play()
+            });
+            document.getElementById('sidhu').addEventListener('mouseout',function(){
+            a_sidhu.pause()
+            });
+
+            document.getElementById('AP').addEventListener('mouseover',function(){
+            a_AP.play()
+            });
+            document.getElementById('AP').addEventListener('mouseout',function(){
+            a_AP.pause()
+            });
+
+            document.getElementById('aujla').addEventListener('mouseover',function(){
+            a_aujla.play()
+            });
+            document.getElementById('aujla').addEventListener('mouseout',function(){
+            a_aujla.pause()
+            });
+
+            document.getElementById('cheema').addEventListener('mouseover',function(){
+            a_cheema.play()
+            });
+            document.getElementById('cheema').addEventListener('mouseout',function(){
+            a_cheema.pause()
+            });
+
+            // document.querySelector('#sidhu').addEventListener('click',function(event)
+            // {
+            //     event.target.style.backgroundColor = 'green';
+            // });
+            let p = document.querySelector('#correct');
+            document.querySelector('#b_div').addEventListener('click',function(event)
+            {
+                if(event.target.id === "sidhu")
+                {
+                    event.target.style.backgroundColor = 'green';
+                    p.innerHTML = 'Correct';
+                }
+                else
+                {
+                    event.target.style.backgroundColor = 'red';
+                    p.innerHTML = 'Incorrect';
+                }
+            });
+
+        document.querySelector('form').addEventListener('submit',function(event)
+        {
+            let p2 = document.querySelector('#correct2');
+
+            if(document.querySelector('#answer').value === 'Moosa')
+            {
+                p2.innerHTML = 'Correct';
+                document.querySelector('#answer').style.backgroundColor = 'green';
+                document.querySelector('#answer').style.color = 'white';
+            }
+            else
+            {
+                p2.innerHTML = 'Incorrect';
+                document.querySelector('#answer').style.color = 'red';
+            }
+        event.preventDefault();
+        });
+
+    });
+
+        </script>
+    </head>
+    <body>
+        <div class="header">
+            <h1>Punjabi Music Trivia!</h1>
+        </div>
+        <div class="consent">
+            <p><b>Please select the consent checkbox first-</b></p>
+            <input type="checkbox" id="consent">
+            <label for="consent"><u>I would like to provide my <b>invaluable</b> take on Punjabi Music.</u></label>
+        </div>
+        <div class="container">
+            <div class="section" id="MCQ">
+                <!-- <h2>Part 1: Multiple Choice </h2> -->
+                <hr>
+                <!-- TODO: Add multiple choice question here -->
+                 <h3>Who is the Real GOAT in the Punjabi Music Industry?</h3>
+                 <p id="correct"></p>
+                 <p style="font-size: 0.8em;">Try hovering over the respective choices if you want a glimpse of their music</p>
+                 <div id='b_div'>
+                 <button id='diljit'>Diljit Dosanjh</button>
+                 <button id='sidhu'>Sidhu Moosewala</button>
+                 <button id='AP'>AP Dhillon</button>
+                 <button id='aujla'>Karan Aujla</button>
+                 <button id='cheema'>Cheema Y</button>
+                 </div>
+            </div>
+
+            <div class="section">
+                <hr>
+                <!-- TODO: Add free response question here -->
+                 <h3>From where does Sidhu belong to?</h3>
+                 <p id="correct2"></p>
+                 <form>
+                 <input type="text" id="answer" name="Answer" placeholder="Name of place(capitalize first letter)">
+                 <input type="submit">
+                 </form>
+            </div>
+        </div>
+    </body>
+</html>
